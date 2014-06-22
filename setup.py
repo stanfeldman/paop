@@ -6,7 +6,7 @@ except:
 
 setup(
     name = "paop",
-    version = "0.1.0",
+    version = "0.1.1",
     author = "Stanislav Feldman",
     description = ("Python AOP framework"),
     url = "https://github.com/stanislavfeldman/paop",

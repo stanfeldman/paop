@@ -1,6 +1,7 @@
 from __future__ import absolute_import
 from types import TypeType
 import re
+import sys
 
 
 class AspectCall(object):
@@ -27,6 +28,9 @@ class AspectCall(object):
 			on_fail_result = self.aspect.on_fail(self)
 			if on_fail_result:
 				return on_fail_result
+			else:
+				exc_info = sys.exc_info()
+				raise exc_info[1], None, exc_info[2]
 
 	
 class Aspect(object):
