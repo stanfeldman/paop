@@ -24,7 +24,7 @@ class AspectCall(object):
 				return on_success_result
 			return self.result
 		except Exception, e:
-			self.exception = e
+			self.aspect.exception = e
 			on_fail_result = self.aspect.on_fail(self)
 			if on_fail_result:
 				return on_fail_result
